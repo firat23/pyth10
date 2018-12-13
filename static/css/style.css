@@ -1,0 +1,10 @@
+.renk1{color:rgb(240, 240, 240) !important; transition:color .5s ease-in-out;}
+.renk1:hover{color:rgb(124, 207, 255) !important;}
+.renk2{color:rgb(0, 0, 0) !important; transition:color .5s ease-in-out;}
+.renk2:hover{color:rgb(0, 132, 255) !important;}
+.fare{cursor: pointer !important;}
+.thead-dark{background-color: rgb(176, 214, 245)}
+.jumbotron1{padding:1rem 1rem; margin-bottom:1rem; background-color:rgb(204, 238, 255); border-radius:0.5rem;}
+.ortala{word-wrap:break-word;}
+body{overflow-x: hidden;}
+.navbar23{background-color:rgb(0, 0, 0) !important;}

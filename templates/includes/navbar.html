@@ -1,0 +1,32 @@
+<nav class="navbar23 navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+        <a class="navbar-brand renk1" href="{% url 'index'  %}"><b>Pyth10Blog</b></a>
+        
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link renk1" href="{% url 'about'  %}"><b>Hakkımızda</b></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link renk1" href="{% url 'article:articles'  %}"><b>Makaleler</b></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+          {% if request.user.is_authenticated %}
+            <li class="nav-item active">
+              <a class="nav-link renk1" href="{% url 'article:dashboard'  %}"><b>Kontrol Paneli</b></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link renk1" href="{% url 'user:logout'  %}"><b>Çıkış Yap</b></a>
+            </li>
+          {% else %}
+            <li class="nav-item active">
+              <a class="nav-link renk1" href="{% url 'user:login'  %}"><b>Giriş Yap</b></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link renk1" href="{% url 'user:register'  %}"><b>Kayıt OL</b></a>
+            </li>
+          {% endif %}
+          </ul>
+        </div>
+</nav>
+<hr class="renk2">

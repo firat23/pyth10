@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+{% load crispy_forms_tags %}
+    
+<div class="row">
+        <div class="col-md-6 offset-md-3">
+                <h3>Kayıt OL</h3>
+                <hr>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form|crispy}}
+                    <br>
+                    <script src='https://www.google.com/recaptcha/api.js'></script>
+                    <div class="g-recaptcha" data-sitekey="6LdLUoAUAAAAAK5a0L9TMOKX-339r5GsKoKDedFA"></div>
+                    <br>
+                    <button type="submit" class="btn btn-danger fare">Kayıt OL</button>
+                </form>
+        </div>
+</div>
+
+{% endblock body %}

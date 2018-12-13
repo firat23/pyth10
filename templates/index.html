@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="jumbotron1 text-center">
+        <h3><b>Pyth10Blog'a Hoş Geldiniz</b></h3><br>
+        <p>Bu blogta <b>geliştiriciler</b> olarak blog yazılarınızı paylaşabilir ve insanlara yardımcı olabilirsiniz.</p>
+    </div>
+    <div class="jumbotron1 text-left">
+        <u><b>Blogumuzla ilgili yönergeler :</b></u><br>
+        <ul style="list-style-type:circle">
+            <li>İşe blogumuza Kayıt olarak başlayabilirsiniz..</li>
+            <li>Blogumuza makaleler ekleyip programcı adaylarına destek olabilirsiniz..</li>
+            <li>Kontrol Panelinizden tüm makalelerinize erişip, onları yönetebilirsiniz..</li>
+            <li>Diğer kullanıcıların makalelerine yorumda bulunabilirsiniz..</li>
+        </ul>
+        <u><b>Blogumuzla ilgili birkaç basit kural :</b></u><br>
+        <ul style="list-style-type:circle">
+            <li>Lütfen bu blogta sadece python ve frameworkleri hakkında yazılar paylaşınız..</li>
+            <li>Lütfen makalelerinizde veya yorumlarınızda argo kelimeler kullanmayınız..</li>
+            <li>Küfür, hakaret içeren makale veya yorumlar sahibi ile birlikte blogumuzdan silinecektir..</li>
+        </ul>
+    </div>
+    <p>
+        {% if request.user.is_authenticated %}
+            <b class="renk2 fare">{{request.user.username}}</b> tarafından giriş yapıldı.
+        {% else %}
+            <div class ="alert alert-danger">
+                <b>Henüz giriş yapılmamış..!</b>&nbsp;<b>Giriş</b> yapmak veya halen üye değilseniz <b>Kayıt</b> olmak için sağ-üst menüyü kullanabilirsiniz.
+            </div>
+        {% endif %}
+    </p>
+
+{% endblock body %}
